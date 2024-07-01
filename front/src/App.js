@@ -1,4 +1,5 @@
 import Navbar from "./components/navbar/Navbar";
+import Home from "./pages/home/home";
 
 
 
@@ -6,7 +7,7 @@ import Navbar from "./components/navbar/Navbar";
 function App() {
   return (
     <div>
-      <Navbar/>
+      <Home />
     </div>
   );
 }
