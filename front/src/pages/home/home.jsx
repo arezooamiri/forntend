@@ -1,13 +1,27 @@
+import Article from "../../components/article/Article"
 import Navbar from "../../components/navbar/Navbar"
-
+import styled from "../home/home.module.css"
 
 function  Home(){
     return(
 
-        <div>
+        <div className={styled.homewrapper}> 
             <Navbar />
             <div className="container">
                <h2>مقالات جدید</h2>
+               <div className={styled.articles}>
+                   <Article/>
+                   <Article/>
+                   <Article/>
+                   <Article/>
+                   <Article/>
+                   <Article/>
+                   <Article/>
+                   <Article/>
+
+
+               </div>
+               
 
 
 

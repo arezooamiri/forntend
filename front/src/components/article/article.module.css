@@ -1,0 +1,19 @@
+.articlewrapper{
+    width: 24%;
+    height: 360px ;
+    box-shadow:0px 5px  5px #ccc;
+    margin-top: 20px;
+}
+
+.articlewrapper img{
+    width: 100%;
+}
+.articlewrapper h3{
+    text-align: right;
+    padding: 8px 16px;
+}
+
+.articlewrapper p{
+    text-align:right;
+    padding: 8px 16px;
+}

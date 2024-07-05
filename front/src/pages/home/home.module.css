@@ -1,0 +1,19 @@
+.homewrapper{
+ 
+}
+
+.homewrapper h2{
+    text-align: right;
+    margin-top: 60px ;
+    font-size: medium;
+    padding-right: 40px;
+}
+
+.articles{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
