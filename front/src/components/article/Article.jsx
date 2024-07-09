@@ -1,13 +1,13 @@
 import styeld from "./article.module.css"
 import articel from "./../../assest/images/articel.png"
-function Article(){
+function Article(props){
 
-
+    console.log(props.articel)
     return(
         <div className={styeld.articlewrapper}>
-            <img src={articel}/>
-            <h3> نکات جاوا اسکریپت </h3>
-            <p> مدت زمان خواندن ۱۰ دقیقه</p>
+            <img src={props.article.imageUrl}/>
+            <h3>{props.article.title}</h3>
+            <p> مدت زمان خواندن {props.article.readingTime} دقیقه</p>
         </div>
     )
 
