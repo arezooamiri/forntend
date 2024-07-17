@@ -1,5 +1,5 @@
-import styled from "./navbar.module.css"
-
+import styled from "./navbar.module.css";
+import {Link} from "react-router-dom";
 function Navbar(props){
 
 console.log(props);
@@ -11,9 +11,13 @@ console.log(props);
             
             <ul>
               <h3>{props.title}</h3>
-              <li>لیست مقالات </li>
+              <li> 
+                <Link to="/">لیست مقالات</Link>
+              </li>
               <li> مقاله جدید</li>
-              <li> درباره </li>
+              <li>
+                <Link to="/about">درباره </Link>
+              </li>
             </ul>
           </div>
       </div>
