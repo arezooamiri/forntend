@@ -1,0 +1,10 @@
+.page{
+
+}
+
+.articleinfo{
+    display: flex;
+    justify-content:end ;
+    flex-direction: row-reverse;
+    
+}

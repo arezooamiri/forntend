@@ -5,13 +5,14 @@ import Navbar from "../../components/navbar/Navbar";
 import styled from "../home/home.module.css";
 import axios from "axios";
 import Footer from "../../components/footer/Footer";
+import { Link } from "react-router-dom";
 
 function  Home(){
     const [article,setArticle]=useState([]);
 
     useEffect(()=>{
        axios.get("http://localhost:8000/articles").then(result=>{
-        setArticle(result.data.data);
+        setArticle(result.data);
         
        }) ;    
     },[]);
@@ -26,7 +27,10 @@ function  Home(){
 
                   {
                     article.map((article)=>(
-                        <Article key={article.id} article={article}/> 
+                        <Link to={`/article/${article.id}`}>
+                            <Article key={article.id} article={article}/> 
+                        </Link>
+                        
                      ))
                   }
                    
