@@ -9,9 +9,12 @@ import { Link } from "react-router-dom";
 
 function  Home(){
     const [article,setArticle]=useState([]);
+    const[isloading,setIsloading]=useState(false);
 
     useEffect(()=>{
+        setIsloading(true);
        axios.get("http://localhost:8000/articles").then(result=>{
+        setIsloading(false);
         setArticle(result.data);
         
        }) ;    
@@ -20,22 +23,20 @@ function  Home(){
     return(
         <div className={styled.homewrapper}> 
             <Navbar />
+
             <div className="container">
 
                <h2>مقالات جدید</h2>
-               <div className={styled.articles}>
-
-                  {
-                    article.map((article)=>(
-                        <Link to={`/article/${article.id}`}>
-                            <Article key={article.id} article={article}/> 
-                        </Link>
-                        
-                     ))
-                  }
-                   
-                </div>
-             </div>
+               { isloading ?(<p>چند لحظه صبر کنید</p>):(
+                    <div className={styled.articles}>
+                       {article.map((article)=>(
+                       <Link to={`/article/${article.id}`}>
+                          <Article key={article.id} article={article}/> 
+                       </Link> ))}
+                    </div>)
+                }
+               
+            </div>
             <Footer/>
             
 
