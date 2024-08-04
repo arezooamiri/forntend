@@ -1,0 +1,22 @@
+
+.inputwraper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .inputwraper label{
+      display: block;
+      padding: 10px;
+      text-align:right;
+      
+      
+  }
+  .inputwraper input{
+      width:100%;
+      padding:20px;
+      border: solid #ccc;
+      text-align: right;
+      right: 10px;
+  
+  }

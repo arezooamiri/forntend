@@ -1,20 +1,11 @@
 .createarticlepage{
-
+  padding: 10px 20px 0px 20px ;
 }
 
-.inputwraper{
-
+.container{
+    display: flex;
+    justify-self:right;
 }
-.inputwraper label{
-    display: block;
-    margin-bottom:10px;
-    text-align:right;
-    
-}
-.inputwraper input{
-    width:100%;
-    padding: 10px;
-    border: solid #ccc;
+.container h1{
     text-align: right;
-
 }
